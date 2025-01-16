@@ -8,7 +8,7 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import visaLogo from "../assets/visaLogo.png";
 
-const BASE_URI = process.env.REACT_APP_API_URL
+const BASE_URI = "https://www.bakarcompany.somee.com";
 
 type ApiResponse = {
   cardholderName: string;
