@@ -44,7 +44,9 @@ import { ReactNode } from "react"
   
   
   function formatCell(cell: unknown): ReactNode {
+    //@ts-ignore
     const value = cell.getValue()
+    //@ts-ignore
     const column = cell.column.id
     if (value instanceof Date) {
       return value.toLocaleDateString("en-US", {
@@ -66,6 +68,7 @@ import { ReactNode } from "react"
     if (column && column === "amount") {
       return Intl.NumberFormat("en-US",  {
         style: "currency",
+        //@ts-ignore
         currency: cell.getContext().row.getVisibleCells()[1].getValue()
       }).format(value)
     }

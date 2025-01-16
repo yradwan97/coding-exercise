@@ -1,18 +1,14 @@
-import React from "react";
 import { useEffect, useState } from "react";
 import {
   Card,
   CardHeader,
   CardFooter,
-  CardTitle,
-  CardDescription,
   CardContent,
 } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import visaLogo from "../assets/visaLogo.png";
-import mastercardLogo from "../assets/mastercardLogo.png";
 
-const BASE_URI = "https://www.bakarcompany.somee.com";
+const BASE_URI = process.env.REACT_APP_API_URL
 
 type ApiResponse = {
   cardholderName: string;
